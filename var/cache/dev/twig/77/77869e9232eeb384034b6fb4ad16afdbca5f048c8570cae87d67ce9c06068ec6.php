@@ -113,7 +113,7 @@ class __TwigTemplate_1bbf9b2233fd56186ba1b7856c0791b85a3b9075d375d34295b31631ed3
             echo " </p>
                 <a href=\"";
             // line 15
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_show");
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_show", ["id" => twig_get_attribute($this->env, $this->source, $context["personnage"], "id", [], "any", false, false, false, 15)]), "html", null, true);
             echo "\" class=\"btn btn-primary\">Lire la suite</a>
             </div>
         </article>
@@ -166,7 +166,7 @@ class __TwigTemplate_1bbf9b2233fd56186ba1b7856c0791b85a3b9075d375d34295b31631ed3
                 <img src=\"{{ asset(personnage.image) }}\" style=\"width:350px; height:200px;\" alt=\"\">
                 <p> {{ personnage.description }} </p>
                 <p> {{ personnage.game }} </p>
-                <a href=\"{{ path('blog_show') }}\" class=\"btn btn-primary\">Lire la suite</a>
+                <a href=\"{{ path('blog_show', {'id': personnage.id}) }}\" class=\"btn btn-primary\">Lire la suite</a>
             </div>
         </article>
 {% endfor %}
@@ -174,6 +174,6 @@ class __TwigTemplate_1bbf9b2233fd56186ba1b7856c0791b85a3b9075d375d34295b31631ed3
 
 
 {% endblock %}
-", "blog/index.html.twig", "C:\\Users\\Enton\\Documents\\Projet\\Synfony\\my_project_name\\templates\\blog\\index.html.twig");
+", "blog/index.html.twig", "C:\\Users\\Enton\\Documents\\Projet\\Blog\\templates\\blog\\index.html.twig");
     }
 }

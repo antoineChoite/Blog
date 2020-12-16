@@ -61,18 +61,27 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
         echo "    </head>
     <body>
         <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
-            <a class=\"navbar-brand\" href=\"/\">Tatakai</a>
+            <a class=\"navbar-brand\" href=\"";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo "\">TonKai</a>
             <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                 <span class=\"navbar-toggler-icon\"></span>
             </button>
              <div class=\"navbar-collapse collapse show\" id=\"navbarColor02\" style=\"\">
                 <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/blog\">Articles
+                    <a class=\"nav-link\" href=\"";
+        // line 19
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog");
+        echo "\">Personnages
                     </a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/blog/new\">Créer un article</a>
+                    <a class=\"nav-link\" href=\"";
+        // line 23
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("personnage_create");
+        echo "\">Créer un personnage</a>
                 </li>
             </ul>
         </div>
@@ -176,9 +185,14 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  157 => 31,  139 => 29,  121 => 8,  102 => 5,  90 => 32,  88 => 31,  85 => 30,  83 => 29,  61 => 9,  59 => 8,  53 => 5,  47 => 1,);
+        return array (  166 => 31,  148 => 29,  130 => 8,  111 => 5,  99 => 32,  97 => 31,  94 => 30,  92 => 29,  83 => 23,  76 => 19,  66 => 12,  61 => 9,  59 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -194,18 +208,18 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
     </head>
     <body>
         <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
-            <a class=\"navbar-brand\" href=\"/\">Tatakai</a>
+            <a class=\"navbar-brand\" href=\"{{ path('home') }}\">TonKai</a>
             <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                 <span class=\"navbar-toggler-icon\"></span>
             </button>
              <div class=\"navbar-collapse collapse show\" id=\"navbarColor02\" style=\"\">
                 <ul class=\"navbar-nav mr-auto\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/blog\">Articles
+                    <a class=\"nav-link\" href=\"{{ path('blog') }}\">Personnages
                     </a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"/blog/new\">Créer un article</a>
+                    <a class=\"nav-link\" href=\"{{ path('personnage_create') }}\">Créer un personnage</a>
                 </li>
             </ul>
         </div>
@@ -216,6 +230,6 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\Enton\\Documents\\Projet\\Synfony\\my_project_name\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\Enton\\Documents\\Projet\\Blog\\templates\\base.html.twig");
     }
 }

@@ -65,7 +65,7 @@ class __TwigTemplate_97d4d0cd336727ffbb9ca971786573b5ace4e0986e8f1297fb91ca0ce5b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "<h1> Tatakai </h1>
+        echo "<h1> TonKai </h1>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -95,7 +95,7 @@ class __TwigTemplate_97d4d0cd336727ffbb9ca971786573b5ace4e0986e8f1297fb91ca0ce5b
         return new Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-<h1> Tatakai </h1>
-{% endblock %}", "blog/home.html.twig", "C:\\Users\\Enton\\Documents\\Projet\\Synfony\\my_project_name\\templates\\blog\\home.html.twig");
+<h1> TonKai </h1>
+{% endblock %}", "blog/home.html.twig", "C:\\Users\\Enton\\Documents\\Projet\\Blog\\templates\\blog\\home.html.twig");
     }
 }

@@ -5,14 +5,13 @@
 {% block body %}
 
 <section class="articles">
-{% for personnage in personnages %}
+{% for video in videos %}
         <article>
-            <h2> {{ personnage.nom }}</h2>
+            <h2> {{ video.nom }}</h2>
             <div class="content">
-                <img src="{{ asset(personnage.image) }}" style="width:350px; height:200px;" alt="">
-                <p> {{ personnage.description }} </p>
-                <p> {{ personnage.game }} </p>
-                <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+                <img src="{{ asset(video.image) }}" style="width:350px; height:200px;" alt="">
+                <p> {{ video.description }} </p>
+                <a href="{{ path('blog_show', {'id': video.id}) }}" class="btn btn-primary">Lire la suite</a>
             </div>
         </article>
 {% endfor %}

@@ -2,23 +2,23 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Personnage;
+use App\Entity\Video;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
-class PersonnageFixtures extends Fixture
+class VideoFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
         // $product = new Product();
         // $manager->persist($product);
         for ($i=1; $i <= 4; $i++) { 
-            $personnage = new Personnage();
-            $personnage->setNom("Personnage N°$i")
-                        ->setDescription("Description du personnage n°$i")
-                        ->setGame("Game du personnage n°$i")
+            $video = new Video();
+            $video->setNom("Video N°$i")
+                        ->setDescription("Description du video n°$i")
+                        ->setGame("Game du video n°$i")
                         ->setImage("asset/$i.png");
-            $manager->persist($personnage);
+            $manager->persist($video);
         }
 
         $manager->flush();

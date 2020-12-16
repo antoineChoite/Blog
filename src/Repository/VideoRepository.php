@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Personnage;
+use App\Entity\Video;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Personnage|null find($id, $lockMode = null, $lockVersion = null)
- * @method Personnage|null findOneBy(array $criteria, array $orderBy = null)
- * @method Personnage[]    findAll()
- * @method Personnage[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Video|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Video|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Video[]    findAll()
+ * @method Video[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class PersonnageRepository extends ServiceEntityRepository
+class VideoRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Personnage::class);
+        parent::__construct($registry, Video::class);
     }
 
     // /**
-    //  * @return Personnage[] Returns an array of Personnage objects
+    //  * @return Video[] Returns an array of Video objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class PersonnageRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Personnage
+    public function findOneBySomeField($value): ?Video
     {
         return $this->createQueryBuilder('p')
             ->andWhere('p.exampleField = :val')
