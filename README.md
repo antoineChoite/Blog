@@ -12,22 +12,24 @@ pré-requis(Wamp Server et composer)
 Clonez le projet sur votre Desktop
 
 Allez à la racine du projet, ouvrez un terminal
-
+```
 php bin/console doctrine:migrations:migrate
-
-répondez "yes" à la question
+```
+répondez "yes" à la question.
 
 cette commande vous permettra d'avoir la bonne structure de données 
 
 
 ouvrez votre navigateur allez sur phpmyadmin et logguez vous.
+```
 User: Root 
 mdp: (vide donc cliquez directement sur "validez") 
-
+```
 Aller dans la base de données "Smash" et dans la table "Video". Importer le fichier Video.sql se trouvant dans le dossier "table data".
 
-retournez sur votre terminal et tapez cette commande
+Retournez sur votre terminal et tapez cette commande
 
+```
 php bin/console server:run
-
+```
 Ouvrez votre navigateur et aller sur localhost:8000/blog
