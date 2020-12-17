@@ -7,7 +7,7 @@ La plateforme sera déployée et disponible sur le web une fois que j'estimerais
 
 Vous pouvez la tester en local en suivant ces étapes : 
 
-Pré-requis(**Wamp Server** et **composer**)
+Pré-requis([**Wamp Server**](https://www.wampserver.com/) et [**composer**](https://getcomposer.org/))
 
 *Clonez* le projet sur votre Desktop.
 Allez à la racine du projet, ouvrez un terminal.
