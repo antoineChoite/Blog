@@ -1,13 +1,13 @@
 # TonKai
 
 Une plateforme en développement qui me permettra de poster et diffuser mes différentes vidéos que j'ai montées.
-Stack technique: Symfony 4, PHP, Twig, Doctrine, MySQL, Wamp, HTML, CSS.
+Stack technique: **Symfony 4, PHP, Twig, Doctrine, MySQL, Wamp, HTML, CSS.**
 
 La plateforme sera disponible sur le web une fois que j'estimerais que le développement aura atteint un certain cap.
 
 Vous pouvez la tester en local en suivant ces étapes : 
 
-pré-requis(Wamp Server et composer)
+pré-requis(**Wamp Server** et **composer**)
 
 Clonez le projet sur votre Desktop.
 Allez à la racine du projet, ouvrez un terminal.
