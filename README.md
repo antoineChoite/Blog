@@ -28,3 +28,5 @@ Retournez sur votre terminal et tapez cette commande.
 php bin/console server:run
 ```
 Ouvrez votre navigateur et aller sur **localhost:8000/blog**.
+
+Vous pouvez aussi voir le rendu du projet via le fichier *capture.gif*.
