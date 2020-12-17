@@ -545,3 +545,12 @@ a05189,127.0.0.1,GET,http://localhost:8000/blog,1608181533,,200
 ac6860,127.0.0.1,GET,http://localhost:8000/blog/4,1608181540,,200
 6ebacd,127.0.0.1,GET,http://localhost:8000/favicon.ico,1608181546,5ddce4,404
 5ddce4,127.0.0.1,GET,http://localhost:8000/favicon.ico,1608181546,,404
+449f9b,127.0.0.1,GET,http://localhost:8000/blog/new,1608185565,,200
+71bd92,127.0.0.1,GET,http://localhost:8000/blog,1608185568,,200
+246d23,127.0.0.1,GET,http://localhost:8000/blog/4,1608186086,,200
+92c69e,127.0.0.1,GET,http://localhost:8000/favicon.ico,1608186092,9bb4d5,404
+9bb4d5,127.0.0.1,GET,http://localhost:8000/favicon.ico,1608186092,,404
+e839ae,127.0.0.1,GET,http://localhost:8000/serie,1608186104,,200
+5d0391,127.0.0.1,GET,http://localhost:8000/opening,1608186111,,200
+dac91c,127.0.0.1,GET,http://localhost:8000/blog,1608186117,,200
+1953b4,127.0.0.1,GET,http://localhost:8000/blog/3,1608186123,,200
