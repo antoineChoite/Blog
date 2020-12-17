@@ -2,11 +2,9 @@
 
 {% block body %}
 <article>
-        <h2>{{video.nom}}</h2>
-        <div class="content">
-            <img src="{{asset(video.image)}}" alt="">
-            <p>{{video.game}}</p>
-            <p>{{video.description}}</p>
+        <h3>{{video.nom}}</h3>
+        <div class="content" style="margin-top: 30px; background-color: black;">
+            {{video.video | raw }}
         </div>
     </article>
 {% endblock %}

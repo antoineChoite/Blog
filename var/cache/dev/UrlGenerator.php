@@ -17,7 +17,9 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token'], ['text', '/_profiler']], [], []],
     'blog' => [[], ['_controller' => 'App\\Controller\\BlogController::index'], [], [['text', '/blog']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\BlogController::home'], [], [['text', '/']], [], []],
-    'personnage_create' => [[], ['_controller' => 'App\\Controller\\BlogController::create'], [], [['text', '/blog/new']], [], []],
+    'video_create' => [[], ['_controller' => 'App\\Controller\\BlogController::create'], [], [['text', '/blog/new']], [], []],
     'blog_show' => [['id'], ['_controller' => 'App\\Controller\\BlogController::show'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/blog']], [], []],
+    'serie' => [[], ['_controller' => 'App\\Controller\\BlogController::serie_list'], [], [['text', '/serie']], [], []],
+    'opening' => [[], ['_controller' => 'App\\Controller\\BlogController::opening_list'], [], [['text', '/opening']], [], []],
     'security_registration' => [[], ['_controller' => 'App\\Controller\\SecurityController::registration'], [], [['text', '/inscription']], [], []],
 ];

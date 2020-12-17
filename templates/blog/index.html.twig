@@ -1,18 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Smash Test{% endblock %}
 
 {% block body %}
-
-<section class="articles">
+<img src="{{ asset("asset/wolfRender.png")}}" style="position: fixed; right: 0; width: 30%; min-height: 90%; filter : brightness(65%);" alt="">
+<img src="{{ asset("asset/foxRender.png")}}" style="position: fixed; left: 0; width: 30%; min-height: 90%; filter : brightness(65%);" alt="">
+<h2>Liste des vidéos</h2>
+<section class="articles" style="margin-top: 15px;">
 {% for video in videos %}
-        <article>
-            <h2> {{ video.nom }}</h2>
-            <div class="content">
-                <img src="{{ asset(video.image) }}" style="width:350px; height:200px;" alt="">
-                <p> {{ video.description }} </p>
-                <a href="{{ path('blog_show', {'id': video.id}) }}" class="btn btn-primary">Lire la suite</a>
+        <article style="margin-top: 15px;">
+            <a href="{{ path('blog_show', {'id': video.id}) }}"> <h5> {{ video.nom }}</h5> </a>
+            <div class="content" style="background-color: black; width:600px; margin-left: auto; margin-right: auto;">
+                <a href="{{ path('blog_show', {'id': video.id}) }}">
+                    <img src="{{ asset(video.image) }}" style="width:600px; height:300px;" alt="">
+                </a>
             </div>
+            <p style="margin-top: 10px;"> {{ video.description }} </p>
+            <a href="{{ path('blog_show', {'id': video.id}) }}" class="btn btn-primary">Regarder</a>
         </article>
 {% endfor %}
 </section>

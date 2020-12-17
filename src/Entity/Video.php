@@ -47,6 +47,11 @@ class Video
      */
     private $serie;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $opening;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +125,18 @@ class Video
     public function setSerie(bool $serie): self
     {
         $this->serie = $serie;
+
+        return $this;
+    }
+
+    public function getOpening(): ?bool
+    {
+        return $this->opening;
+    }
+
+    public function setOpening(bool $opening): self
+    {
+        $this->opening = $opening;
 
         return $this;
     }

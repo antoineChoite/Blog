@@ -15,7 +15,9 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/blog' => [[['_route' => 'blog', '_controller' => 'App\\Controller\\BlogController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\BlogController::home'], null, null, null, false, false, null]],
-        '/blog/new' => [[['_route' => 'personnage_create', '_controller' => 'App\\Controller\\BlogController::create'], null, null, null, false, false, null]],
+        '/blog/new' => [[['_route' => 'video_create', '_controller' => 'App\\Controller\\BlogController::create'], null, null, null, false, false, null]],
+        '/serie' => [[['_route' => 'serie', '_controller' => 'App\\Controller\\BlogController::serie_list'], null, null, null, false, false, null]],
+        '/opening' => [[['_route' => 'opening', '_controller' => 'App\\Controller\\BlogController::opening_list'], null, null, null, false, false, null]],
         '/inscription' => [[['_route' => 'security_registration', '_controller' => 'App\\Controller\\SecurityController::registration'], null, null, null, false, false, null]],
     ],
     [ // $regexpList

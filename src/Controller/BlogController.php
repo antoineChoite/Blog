@@ -21,7 +21,7 @@ class BlogController extends AbstractController
         $video = $repo->findAll();
         return $this->render('blog/index.html.twig', [
             'controller_name' => 'BlogController',
-            'video' => $video,
+            'videos' => $video,
         ]);
     }
 
@@ -34,29 +34,28 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/blog/new", name="personnage_create") 
+     * @Route("/blog/new", name="video_create") 
      */
     public function create(Request $request, EntityManagerInterface $manager){
-        $personnage = new Video();
+        $video = new Video();
 
-        $form = $this->createformBuilder($personnage)
+        $form = $this->createformBuilder($video)
                     ->add('nom')
                     ->add('game')
                     ->add('description', TextAreaType::class)
                     ->add('image')
+                    ->add('video')
+                    ->add('serie')
                     ->getform();
 
         $form->handleRequest($request);
-
-        dump($personnage);
-
         if ($form->isSubmitted() and $form->isValid()) {
 
-            $manager->persist($personnage);
+            $manager->persist($video);
             $manager->flush();
 
             return $this->redirectToRoute('blog_show', [
-                'id' => $personnage->getId()
+                'id' => $video->getId()
                 ]);
         }
 
@@ -69,12 +68,38 @@ class BlogController extends AbstractController
     /**
      * @Route("/blog/{id}", name="blog_show")
      */
-    public function show($id)
-    {
+    public function show($id){
         $repos = $this->getDoctrine()->getRepository(Video::class);
-        $personnage = $repos->find($id);
+        $video = $repos->find($id);
         return $this->render('blog/show.html.twig', [
-            'personnage' => $personnage
+            'video' => $video
+        ]);
+    }
+
+    /**
+     * @Route("/serie", name="serie")
+     */
+    public function serie_list(){
+        $repo = $this->getDoctrine()->getRepository(Video::class);
+        $serie = $repo->findBy([
+            'serie' => true
+        ]);
+        return $this->render('blog/serie.html.twig', [
+            'controller_name' => 'BlogController',
+            'series' => $serie,
+        ]);
+    }
+    /**
+     * @Route("/opening", name="opening")
+     */
+    public function opening_list(){
+        $repo = $this->getDoctrine()->getRepository(Video::class);
+        $opening = $repo->findBy([
+            'opening' => true
+        ]);
+        return $this->render('blog/opening.html.twig', [
+            'controller_name' => 'BlogController',
+            'openings' => $opening
         ]);
     }
 }

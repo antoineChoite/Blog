@@ -4695,6 +4695,7 @@
     <service id="maker.generator" class="Symfony\Bundle\MakerBundle\Generator" public="false">
       <argument type="service" id="maker.file_manager"/>
       <argument>App</argument>
+      <argument type="service" id="maker.php_compat_util"/>
     </service>
     <service id="maker.entity_class_generator" class="Symfony\Bundle\MakerBundle\Doctrine\EntityClassGenerator" public="false">
       <argument type="service" id="maker.generator"/>
@@ -4707,6 +4708,9 @@
     <service id="maker.security_config_updater" class="Symfony\Bundle\MakerBundle\Security\SecurityConfigUpdater" public="false"/>
     <service id="maker.renderer.form_type_renderer" class="Symfony\Bundle\MakerBundle\Renderer\FormTypeRenderer" public="false">
       <argument type="service" id="maker.generator"/>
+    </service>
+    <service id="maker.php_compat_util" class="Symfony\Bundle\MakerBundle\Util\PhpCompatUtil" public="false">
+      <argument type="service" id="maker.file_manager"/>
     </service>
     <service id="maker.maker.make_authenticator" class="Symfony\Bundle\MakerBundle\Maker\MakeAuthenticator" public="false">
       <tag name="maker.command"/>

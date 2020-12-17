@@ -60,42 +60,54 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
         // line 9
         echo "    </head>
     <body>
-        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
+        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\" style=\"position: fixed; top: 0; width: 100%;\">
             <a class=\"navbar-brand\" href=\"";
         // line 12
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog");
         echo "\">TonKai</a>
             <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                 <span class=\"navbar-toggler-icon\"></span>
             </button>
              <div class=\"navbar-collapse collapse show\" id=\"navbarColor02\" style=\"\">
                 <ul class=\"navbar-nav mr-auto\">
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"";
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"";
         // line 19
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog");
-        echo "\">Personnages
-                    </a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"";
+        echo "\">Videos
+                        </a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"";
         // line 23
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("personnage_create");
-        echo "\">Créer un personnage</a>
-                </li>
-            </ul>
-        </div>
-        </nav>
-        <div class=\"container\">
-            ";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("serie");
+        echo "\">World of Fight</a>
+                    </li>
+                      <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"";
+        // line 26
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("opening");
+        echo "\">Openings</a>
+                    </li>
+                         <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"";
         // line 29
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("video_create");
+        echo "\">Ajouter une video</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class=\"container\" style=\"text-align: center; margin-top:5%;\">
+            ";
+        // line 35
         $this->displayBlock('body', $context, $blocks);
-        // line 30
+        // line 36
         echo "        </div>
         ";
-        // line 31
+        // line 37
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 32
+        // line 38
         echo "    </body>
 </html>
 ";
@@ -117,7 +129,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Tonkai";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -144,7 +156,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     }
 
-    // line 29
+    // line 35
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -162,7 +174,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     }
 
-    // line 31
+    // line 37
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -192,7 +204,7 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 
     public function getDebugInfo()
     {
-        return array (  166 => 31,  148 => 29,  130 => 8,  111 => 5,  99 => 32,  97 => 31,  94 => 30,  92 => 29,  83 => 23,  76 => 19,  66 => 12,  61 => 9,  59 => 8,  53 => 5,  47 => 1,);
+        return array (  178 => 37,  160 => 35,  142 => 8,  123 => 5,  111 => 38,  109 => 37,  106 => 36,  104 => 35,  95 => 29,  89 => 26,  83 => 23,  76 => 19,  66 => 12,  61 => 9,  59 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -201,30 +213,36 @@ class __TwigTemplate_073964a37dfbc4eabfa3f0516610560878687b60d8c1b99d7070fb787c2
 <html>
     <head>
         <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Tonkai{% endblock %}</title>
         <link rel=\"stylesheet\" 
         href=\"https://bootswatch.com/4/darkly/bootstrap.min.css\">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
-            <a class=\"navbar-brand\" href=\"{{ path('home') }}\">TonKai</a>
+        <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\" style=\"position: fixed; top: 0; width: 100%;\">
+            <a class=\"navbar-brand\" href=\"{{ path('blog') }}\">TonKai</a>
             <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\" aria-controls=\"navbarColor02\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                 <span class=\"navbar-toggler-icon\"></span>
             </button>
              <div class=\"navbar-collapse collapse show\" id=\"navbarColor02\" style=\"\">
                 <ul class=\"navbar-nav mr-auto\">
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"{{ path('blog') }}\">Personnages
-                    </a>
-                </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"{{ path('personnage_create') }}\">Créer un personnage</a>
-                </li>
-            </ul>
-        </div>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"{{ path('blog') }}\">Videos
+                        </a>
+                    </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"{{ path('serie') }}\">World of Fight</a>
+                    </li>
+                      <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"{{ path('opening') }}\">Openings</a>
+                    </li>
+                         <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\"{{ path('video_create') }}\">Ajouter une video</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <div class=\"container\">
+        <div class=\"container\" style=\"text-align: center; margin-top:5%;\">
             {% block body %}{% endblock %}
         </div>
         {% block javascripts %}{% endblock %}

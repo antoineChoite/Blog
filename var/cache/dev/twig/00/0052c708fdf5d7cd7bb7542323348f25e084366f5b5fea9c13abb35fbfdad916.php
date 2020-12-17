@@ -66,23 +66,15 @@ class __TwigTemplate_0779aea35782dc0c2ff27f8836bb9af0f37ebed0cd3e66a367bc5e9205d
 
         // line 4
         echo "<article>
-        <h2>";
+        <h3>";
         // line 5
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["personnage"]) || array_key_exists("personnage", $context) ? $context["personnage"] : (function () { throw new RuntimeError('Variable "personnage" does not exist.', 5, $this->source); })()), "nom", [], "any", false, false, false, 5), "html", null, true);
-        echo "</h2>
-        <div class=\"content\">
-            <img src=\"";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["video"]) || array_key_exists("video", $context) ? $context["video"] : (function () { throw new RuntimeError('Variable "video" does not exist.', 5, $this->source); })()), "nom", [], "any", false, false, false, 5), "html", null, true);
+        echo "</h3>
+        <div class=\"content\" style=\"margin-top: 30px; background-color: black;\">
+            ";
         // line 7
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, (isset($context["personnage"]) || array_key_exists("personnage", $context) ? $context["personnage"] : (function () { throw new RuntimeError('Variable "personnage" does not exist.', 7, $this->source); })()), "image", [], "any", false, false, false, 7)), "html", null, true);
-        echo "\" alt=\"\">
-            <p>";
-        // line 8
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["personnage"]) || array_key_exists("personnage", $context) ? $context["personnage"] : (function () { throw new RuntimeError('Variable "personnage" does not exist.', 8, $this->source); })()), "game", [], "any", false, false, false, 8), "html", null, true);
-        echo "</p>
-            <p>";
-        // line 9
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["personnage"]) || array_key_exists("personnage", $context) ? $context["personnage"] : (function () { throw new RuntimeError('Variable "personnage" does not exist.', 9, $this->source); })()), "description", [], "any", false, false, false, 9), "html", null, true);
-        echo "</p>
+        echo twig_get_attribute($this->env, $this->source, (isset($context["video"]) || array_key_exists("video", $context) ? $context["video"] : (function () { throw new RuntimeError('Variable "video" does not exist.', 7, $this->source); })()), "video", [], "any", false, false, false, 7);
+        echo "
         </div>
     </article>
 ";
@@ -106,7 +98,7 @@ class __TwigTemplate_0779aea35782dc0c2ff27f8836bb9af0f37ebed0cd3e66a367bc5e9205d
 
     public function getDebugInfo()
     {
-        return array (  84 => 9,  80 => 8,  76 => 7,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  76 => 7,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -115,11 +107,9 @@ class __TwigTemplate_0779aea35782dc0c2ff27f8836bb9af0f37ebed0cd3e66a367bc5e9205d
 
 {% block body %}
 <article>
-        <h2>{{personnage.nom}}</h2>
-        <div class=\"content\">
-            <img src=\"{{asset(personnage.image)}}\" alt=\"\">
-            <p>{{personnage.game}}</p>
-            <p>{{personnage.description}}</p>
+        <h3>{{video.nom}}</h3>
+        <div class=\"content\" style=\"margin-top: 30px; background-color: black;\">
+            {{video.video | raw }}
         </div>
     </article>
 {% endblock %}", "blog/show.html.twig", "C:\\Users\\Enton\\Documents\\Projet\\Blog\\templates\\blog\\show.html.twig");

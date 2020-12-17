@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerRpBwG1L/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerU8szHQM/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -278,6 +278,7 @@ $classes[] = 'Symfony\Bundle\MakerBundle\Util\AutoloaderUtil';
 $classes[] = 'Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder';
 $classes[] = 'Symfony\Bundle\MakerBundle\Util\MakerFileLinkFormatter';
 $classes[] = 'Symfony\Bundle\MakerBundle\Generator';
+$classes[] = 'Symfony\Bundle\MakerBundle\Util\PhpCompatUtil';
 $classes[] = 'Symfony\Bundle\MakerBundle\Renderer\FormTypeRenderer';
 $classes[] = 'Symfony\Bundle\MakerBundle\Security\SecurityConfigUpdater';
 $classes[] = 'Symfony\Component\Mime\MimeTypes';
