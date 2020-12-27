@@ -1,6 +1,6 @@
 # TonKai
 
-Une plateforme en développement qui a pour but de me permettre de poster et diffuser mes différentes réalisations de vidéos.</br>
+Une application web en développement qui a pour but de me permettre de poster et diffuser mes différentes réalisations de vidéos.</br>
 Stack technique: **Symfony 4, PHP, Twig, Doctrine, MySQL, Wamp, HTML, CSS.**
 
 La plateforme sera déployée et disponible sur le web une fois que j'estimerais que le développement aura atteint un certain cap.
