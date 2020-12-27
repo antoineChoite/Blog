@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<img src="{{ asset("asset/wolfRender.png")}}" style="position: fixed; right: 0; width: 30%; min-height: 90%; filter : brightness(65%);" alt="">
+<img src="{{ asset("asset/foxRender.png")}}" style="position: fixed; left: 0; width: 30%; min-height: 90%; filter : brightness(65%);" alt="">
+<h2>Liste des épisodes World of Fight </h2>
+ <section class="articles" style="margin-top: 15px;">
+{% for serie in series %}
+        <article style="margin-top: 15px;">
+            <a href="{{ path('blog_show', {'id': serie.id}) }}"> <h5> {{ serie.nom }}</h5> </a>
+            <div class="content" style="background-color: black; width:600px; margin-left: auto; margin-right: auto;">
+                <a href="{{ path('blog_show', {'id': serie.id}) }}">
+                    <img src="{{ asset(serie.image) }}" style="width:600px; height:300px;" alt="">
+                </a>
+            </div>
+            <p style="margin-top: 10px;"> {{ serie.description }} </p>
+            <a href="{{ path('blog_show', {'id': serie.id}) }}" class="btn btn-primary">Regarder</a>
+        </article>
+{% endfor %}
+
+{% endblock %}
