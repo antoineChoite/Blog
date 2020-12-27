@@ -13,7 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 class BlogController extends AbstractController
 {
     /**
-     * @Route("/blog", name="blog")
+     * @Route("/", name="blog")
      */
     public function index(): Response
     {
@@ -34,7 +34,7 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/blog/new", name="video_create") 
+     * @Route("/video/new", name="video_create") 
      */
     public function create(Request $request, EntityManagerInterface $manager){
         $video = new Video();
@@ -45,6 +45,7 @@ class BlogController extends AbstractController
                     ->add('description', TextAreaType::class)
                     ->add('image')
                     ->add('video')
+                    ->add('opening')
                     ->add('serie')
                     ->getform();
 
@@ -66,7 +67,7 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/blog/{id}", name="blog_show")
+     * @Route("/video/{id}", name="blog_show")
      */
     public function show($id){
         $repos = $this->getDoctrine()->getRepository(Video::class);

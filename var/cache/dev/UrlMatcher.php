@@ -13,9 +13,11 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/blog' => [[['_route' => 'blog', '_controller' => 'App\\Controller\\BlogController::index'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\BlogController::home'], null, null, null, false, false, null]],
-        '/blog/new' => [[['_route' => 'video_create', '_controller' => 'App\\Controller\\BlogController::create'], null, null, null, false, false, null]],
+        '/' => [
+            [['_route' => 'blog', '_controller' => 'App\\Controller\\BlogController::index'], null, null, null, false, false, null],
+            [['_route' => 'home', '_controller' => 'App\\Controller\\BlogController::home'], null, null, null, false, false, null],
+        ],
+        '/video/new' => [[['_route' => 'video_create', '_controller' => 'App\\Controller\\BlogController::create'], null, null, null, false, false, null]],
         '/serie' => [[['_route' => 'serie', '_controller' => 'App\\Controller\\BlogController::serie_list'], null, null, null, false, false, null]],
         '/opening' => [[['_route' => 'opening', '_controller' => 'App\\Controller\\BlogController::opening_list'], null, null, null, false, false, null]],
         '/inscription' => [[['_route' => 'security_registration', '_controller' => 'App\\Controller\\SecurityController::registration'], null, null, null, false, false, null]],
@@ -37,7 +39,14 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/blog/([^/]++)(*:183)'
+                .'|/video/([^/]++)(*:184)'
+                .'|/api(?'
+                    .'|(?:/(index)(?:\\.([^/]++))?)?(*:227)'
+                    .'|/(?'
+                        .'|docs(?:\\.([^/]++))?(*:258)'
+                        .'|contexts/(.+)(?:\\.([^/]++))?(*:294)'
+                    .')'
+                .')'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -48,8 +57,11 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        183 => [
-            [['_route' => 'blog_show', '_controller' => 'App\\Controller\\BlogController::show'], ['id'], null, null, false, true, null],
+        184 => [[['_route' => 'blog_show', '_controller' => 'App\\Controller\\BlogController::show'], ['id'], null, null, false, true, null]],
+        227 => [[['_route' => 'api_entrypoint', '_controller' => 'api_platform.action.entrypoint', '_format' => '', '_api_respond' => 'true', 'index' => 'index'], ['index', '_format'], null, null, false, true, null]],
+        258 => [[['_route' => 'api_doc', '_controller' => 'api_platform.action.documentation', '_format' => '', '_api_respond' => 'true'], ['_format'], null, null, false, true, null]],
+        294 => [
+            [['_route' => 'api_jsonld_context', '_controller' => 'api_platform.jsonld.action.context', '_format' => 'jsonld', '_api_respond' => 'true'], ['shortName', '_format'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

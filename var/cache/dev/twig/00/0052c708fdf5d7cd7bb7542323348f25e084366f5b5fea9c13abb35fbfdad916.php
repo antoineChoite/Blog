@@ -76,7 +76,8 @@ class __TwigTemplate_0779aea35782dc0c2ff27f8836bb9af0f37ebed0cd3e66a367bc5e9205d
         echo twig_get_attribute($this->env, $this->source, (isset($context["video"]) || array_key_exists("video", $context) ? $context["video"] : (function () { throw new RuntimeError('Variable "video" does not exist.', 7, $this->source); })()), "video", [], "any", false, false, false, 7);
         echo "
         </div>
-    </article>
+ </article>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -111,7 +112,8 @@ class __TwigTemplate_0779aea35782dc0c2ff27f8836bb9af0f37ebed0cd3e66a367bc5e9205d
         <div class=\"content\" style=\"margin-top: 30px; background-color: black;\">
             {{video.video | raw }}
         </div>
-    </article>
-{% endblock %}", "blog/show.html.twig", "C:\\Users\\Enton\\Documents\\Projet\\Blog\\templates\\blog\\show.html.twig");
+ </article>
+
+{% endblock %}", "blog/show.html.twig", "C:\\Users\\Enton\\Documents\\Projet\\TonKai\\templates\\blog\\show.html.twig");
     }
 }

@@ -114,9 +114,18 @@ class ComposerStaticInitc4f4f911ba2196471cdc26a3dd7bdd45
             'PhpParser\\' => 10,
             'PackageVersions\\' => 16,
         ),
+        'N' => 
+        array (
+            'Nelmio\\CorsBundle\\' => 18,
+            'Negotiation\\' => 12,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
+        ),
+        'F' => 
+        array (
+            'Fig\\Link\\' => 9,
         ),
         'E' => 
         array (
@@ -146,6 +155,7 @@ class ComposerStaticInitc4f4f911ba2196471cdc26a3dd7bdd45
         array (
             'App\\Tests\\' => 10,
             'App\\' => 4,
+            'ApiPlatform\\Core\\' => 17,
         ),
     );
 
@@ -460,9 +470,21 @@ class ComposerStaticInitc4f4f911ba2196471cdc26a3dd7bdd45
         array (
             0 => __DIR__ . '/..' . '/composer/package-versions-deprecated/src/PackageVersions',
         ),
+        'Nelmio\\CorsBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nelmio/cors-bundle',
+        ),
+        'Negotiation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/willdurand/negotiation/src/Negotiation',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Fig\\Link\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fig/link-util/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
@@ -545,6 +567,10 @@ class ComposerStaticInitc4f4f911ba2196471cdc26a3dd7bdd45
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'ApiPlatform\\Core\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/api-platform/core/src',
         ),
     );
 
